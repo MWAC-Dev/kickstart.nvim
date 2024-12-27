@@ -12,7 +12,7 @@ vim.keymap.set('n', 'bd', ':bdelete<CR>', { desc = 'close buffer', silent = true
 vim.keymap.set('n', '<leader>n', '<C-o>', { desc = 'close buffer', silent = true })
 vim.keymap.set('n', '<leader>p', '<C-i>', { desc = 'close buffer', silent = true })
 --
-vim.keymap.set('n', '<leader>rn', ':IncRename', { desc = 'Rename' })
+vim.keymap.set('n', '<leader>rn', ':IncRename ', { desc = 'Rename' })
 vim.keymap.set('n', '<leader>sd', vim.lsp.buf.hover, { silent = true, desc = 'Hover Hints' })
 -- vim.keymap.set("n", "<leader>fa", conditional_format, { desc = "Format Code" })
 vim.keymap.set('n', '<leader>er', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic', silent = true })
@@ -43,12 +43,12 @@ CloseAllOtherBuffers = function()
     end
   end
 
-  -- if found_and_removed_buffers == false then
-  --   require('no-neck-pain').toggle()
-  --   require('noice').notify("I don't see any other buffers 🔍", 'info')
-  -- else
-  --   require('noice').notify('We killed all the other buffers 🗡️', 'info')
-  -- end
+  if found_and_removed_buffers == false then
+    require('no-neck-pain').toggle()
+    require('noice').notify("I don't see any other buffers 🔍", 'info')
+  else
+    require('noice').notify('We killed all the other buffers 🗡️', 'info')
+  end
 end
 
 vim.keymap.set('n', '<leader>bo', CloseAllOtherBuffers, { desc = 'Close all other buffers' })
