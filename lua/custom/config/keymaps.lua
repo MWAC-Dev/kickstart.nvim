@@ -9,8 +9,8 @@ vim.keymap.set('n', '<leader>o', ':Oil<CR>', { desc = 'Open Oil', silent = true 
 vim.keymap.set('n', 'H', ':bp<CR>', { desc = 'go to prev buffer', silent = true })
 vim.keymap.set('n', 'L', ':bn<CR>', { desc = 'go to next buffer', silent = true })
 vim.keymap.set('n', 'bd', ':bdelete<CR>', { desc = 'close buffer', silent = true })
-vim.keymap.set('n', '<leader>n', '<C-o>', { desc = 'close buffer', silent = true })
-vim.keymap.set('n', '<leader>p', '<C-i>', { desc = 'close buffer', silent = true })
+vim.keymap.set('n', '<leader>n', '<C-o>', { desc = 'go back', silent = true })
+vim.keymap.set('n', '<leader>.', '<C-i>', { desc = 'go forward', silent = true })
 --
 vim.keymap.set('n', '<leader>rn', ':IncRename ', { desc = 'Rename' })
 vim.keymap.set('n', '<leader>sd', vim.lsp.buf.hover, { silent = true, desc = 'Hover Hints' })
