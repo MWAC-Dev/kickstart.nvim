@@ -17,6 +17,10 @@ vim.keymap.set('n', '<leader>sd', vim.lsp.buf.hover, { silent = true, desc = 'Ho
 -- vim.keymap.set("n", "<leader>fa", conditional_format, { desc = "Format Code" })
 vim.keymap.set('n', '<leader>er', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic', silent = true })
 vim.keymap.set('n', '<leader>ew', vim.diagnostic.goto_prev, { desc = 'Go to prev diagnostic', silent = true })
+
+-- zen--
+vim.keymap.set('n', '<leader>z', ':ZenMode<CR>', { silent = true })
+
 -- close other buffers utility
 CloseAllOtherBuffers = function()
   -- Save all buffers
@@ -44,7 +48,6 @@ CloseAllOtherBuffers = function()
   end
 
   if found_and_removed_buffers == false then
-    require('no-neck-pain').toggle()
     require('noice').notify("I don't see any other buffers 🔍", 'info')
   else
     require('noice').notify('We killed all the other buffers 🗡️', 'info')
