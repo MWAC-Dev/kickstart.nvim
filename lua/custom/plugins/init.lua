@@ -6,6 +6,7 @@
 
 require 'custom.config.autocmds'
 require 'custom.config.keymaps'
+require 'custom.config.telescope-multigrep'
 
 vim.cmd 'set nolist'
 
